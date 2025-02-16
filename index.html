@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="/favicon.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .light-theme {
+      --theme-background: #fff;
+      --theme-text-color: #000;
+    }
+
+    .dark-theme {
+      --theme-background: #1b1b1b;
+      --theme-text-color: #fff;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--theme-background);
+      color: var(--theme-text-color);
+      transition: background-color 0.3s ease;
+    }
+  </style>
+  <title>Minimalist Clock</title>
+</head>
+
+<body>
+  <div id="app"></div>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
