@@ -122,7 +122,24 @@
     transition: fill 0.3s ease;
   }
   
- 
+    .light-theme {
+    --theme-background: #fff;
+    --theme-text-color: #000;
+  }
+  
+  .dark-theme {
+    --theme-background: #1b1b1b;
+    --theme-text-color: #fff;
+  }
+
+    
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-background);
+    color: var(--theme-text-color);
+    transition: background-color 0.3s ease;
+  }
 
   
   @media (max-width: 740px) {
