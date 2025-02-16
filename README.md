@@ -1,7 +1,7 @@
-# Simplest-Clock极简时钟
+# Simplest-Clock极简时钟🎲
 项目预览：https://simplest-clock.vercel.app/
 
-## 功能概述
+## 功能概述🎖
 这是一个响应式实时时钟组件，包含以下核心功能：
 
 1. **实时时钟显示**
@@ -22,21 +22,19 @@
    - GitHub 图标链接
    - 平滑的主题过渡动画
 
-## 技术实现
-
-## 网页预览
+## 网页预览🚝
 
 ![image](https://github.com/user-attachments/assets/defe9042-0524-48ce-8b26-a34af16417ea)
 
 ![image](https://github.com/user-attachments/assets/e7a2d615-5fa4-4ab7-96db-d9b918e79006)
 
 
-### 核心依赖
+### 核心依赖🗿
 - Vue 3 组合式API
 - Element Plus UI框架
 - SVG图标系统
 
-### 主要逻辑
+### 主要逻辑🏘
 ```javascript
 // 时间更新
 const updateTime = () => {
@@ -52,7 +50,7 @@ const initTheme = () => {
 }
 ```
 
-### 样式特性
+### 样式特性🎁
 ```css
 /* 响应式布局 */
 @media (max-width: 740px) {
@@ -70,7 +68,7 @@ const initTheme = () => {
 }
 ```
 
-## 安装使用
+## 安装使用📫
 
 ### 环境要求
 - Node.js 16+
@@ -98,7 +96,7 @@ body {
 }
 ```
 
-## 自定义选项
+## 自定义选项📧
 
 ### 主题配置
 | 变量名称             | 默认值       | 描述               |
@@ -111,7 +109,7 @@ body {
 - 开关位置：修改 `.el-switch` 的定位值
 - 旋转阈值：调整媒体查询的 740px 断点
 
-## 移动端适配策略
+## 移动端适配策略📑
 
 1. **横屏处理**
 ```css
