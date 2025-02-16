@@ -1,4 +1,4 @@
-# Simplest-Clock极简时钟，增添对手机端的横屏适配！！！
+# Simplest-Clock极简时钟
 项目预览：https://simplest-clock.vercel.app/
 
 ## 功能概述
