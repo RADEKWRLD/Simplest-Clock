@@ -1,4 +1,3 @@
-```markdown
 # Simplest-Clock极简时钟，增添对手机端的横屏适配！！！
 项目预览：https://simplest-clock.vercel.app/
 
@@ -23,13 +22,12 @@
    - GitHub 图标链接
    - 平滑的主题过渡动画
 
-5. **性能优化**
-   - JS异步
-
 ## 技术实现
 
-##网页预览
+## 网页预览
+
 ![image](https://github.com/user-attachments/assets/defe9042-0524-48ce-8b26-a34af16417ea)
+
 ![image](https://github.com/user-attachments/assets/e7a2d615-5fa4-4ab7-96db-d9b918e79006)
 
 
