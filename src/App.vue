@@ -8,6 +8,11 @@
         :inactive-icon="Moon"
         @change="themeChange"
       />
+      <button class="fullscreen-btn" @click="toggleFullScreen">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36">
+        <path :fill="theme ? 'var(--theme-text-color)' : '#fff'" d="M3 3h3V1H1v6h2V3zm18 0h-3V1h6v6h-2V3zm-9 3h3V4h-3v2zm0 4h3v-2h-3v2zm0 4h3v-2h-3v2zm0 4h3v-2h-3v2zm-4-4h3v-2H8v2zm0-4h3V4H8v2zm0-4h3V1H8v2zm0 8h3v-2H8v2zm0 4h3v-2H8v2zm0 4h3v-2H8v2zm0 4h3v-2H8v2z"/>
+      </svg>
+    </button>
       <div class="clock-container">
         <div class="clock">
           <h1>{{ time }}</h1>
@@ -68,6 +73,20 @@
     return currentHour >= 6 && currentHour < 18;
   }
   
+//网页全屏
+  function toggleFullScreen() {
+  const doc = document.documentElement;
+  if (!document.fullscreenElement) {
+    doc.requestFullscreen().catch(err => {
+      console.error(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
+    });
+  } else {
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    }
+  }
+}
+
   // 启动时挂载组件
   onMounted(() => {
     updateTime();
@@ -122,24 +141,7 @@
     transition: fill 0.3s ease;
   }
   
-    .light-theme {
-    --theme-background: #fff;
-    --theme-text-color: #000;
-  }
-  
-  .dark-theme {
-    --theme-background: #1b1b1b;
-    --theme-text-color: #fff;
-  }
-
-    
-  body {
-    margin: 0;
-    padding: 0;
-    background-color: var(--theme-background);
-    color: var(--theme-text-color);
-    transition: background-color 0.3s ease;
-  }
+ 
 
   
   @media (max-width: 740px) {
@@ -178,4 +180,35 @@
       left: 1rem;
     }
   }
+
+  .light-theme {
+    --theme-background: #fff;
+    --theme-text-color: #000;
+  }
+  
+  .dark-theme {
+    --theme-background: #1b1b1b;
+    --theme-text-color: #fff;
+  }
+
+    
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--theme-background);
+    color: var(--theme-text-color);
+    transition: background-color 0.3s ease;
+  }
+
+  .fullscreen-btn {
+  position: fixed;
+  right: 2rem;
+  bottom: 8rem; /* 调整位置，避免与主题切换按钮重叠 */
+  z-index: 1000;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transform: scale(1.5);
+}
   </style>
